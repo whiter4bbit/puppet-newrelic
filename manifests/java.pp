@@ -5,7 +5,7 @@ class newrelic::java($agent_source, $config_content) {
 
   file { "/usr/share/newrelic/newrelic.yml":
     content => $config_content,
-    ensure => exists,
+    ensure => present,
     require => Class["newrelic::java::package"]
   }
 }
