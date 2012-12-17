@@ -1,4 +1,4 @@
-class newrelic::java::package($agent_path, $agent_source) {
+class newrelic::java::package($agent_source) {
   Exec { path => ["/usr/bin"] }
 
   file { "/tmp/newrelic_agent.zip":
