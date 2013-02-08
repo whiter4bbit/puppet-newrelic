@@ -11,4 +11,6 @@ class newrelic::java::package($agent_source) {
     creates => "/usr/share/newrelic",
     require => File["/tmp/newrelic_agent.zip"]
   }
+
+  notify { "newrelic package": message => "work around bug #8040" }
 }
